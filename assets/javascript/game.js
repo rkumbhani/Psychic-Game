@@ -16,7 +16,12 @@ console.log(computerChoice)
 // when the user presses a key, it will run the following function to get user key
 document.onkeypress = function(event) {
     var userGuess = event.key;
-
+    
+    // do not run following lines if guess is not a letter
+    if (userGuess < 'a' || userGuess > 'z') {
+        return;
+    }
+    
     // if computerChoice is not set yet, set it
     if (computerChoice == null) {
         computerChoice = alphabets[Math.floor(Math.random() * alphabets.length)];
