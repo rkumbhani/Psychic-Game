@@ -7,7 +7,7 @@ var alphabets = ['a','b','c','d','e','f','g','h','i','j','k','l',
 var wins = 0;
 var losses = 0;
 var left = 10;
-var guesses =  ""
+var guesses =  "";
 
 var computerChoice = alphabets[Math.floor(Math.random() * alphabets.length)];
 
@@ -29,8 +29,8 @@ document.onkeypress = function(event) {
 
     // if user guesses it, reset the game
     if(userGuess === computerChoice){
-        wins++;
-        left = 10;
+        wins++
+        left = 10
         guesses = ""
         computerChoice = alphabets[Math.floor(Math.random()*alphabets.length)];
     }
@@ -42,9 +42,9 @@ document.onkeypress = function(event) {
 
         // add userGuess to guesses
         if(guesses == "") // if first guess do not add the comma
-            guesses = userGuess
+            guesses = userGuess;
         else // else add the comma
-            guesses += ", "+userGuess
+            guesses += ", "+userGuess;
 
         // if out of guesses, reset the game and increment losses
         if(left == 0){
